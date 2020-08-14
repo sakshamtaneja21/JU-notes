@@ -1,0 +1,29 @@
+1. Declare a class to represent bank account of 10 customers with the following data members. Name of the depositor, Account Number, Type of account (S for saving and C for Current), Balance amount. The class also contains member functions to do the following:
+(a) To initialize data members
+(b) To deposit money
+(c) To withdraw money after checking the balance (minimum balance is Rs. 1000).
+(d) To display data members.
+
+2. Write a C++ program to perform various operations on a string class without using language supported built-in string functions. The operations on a class are:
+(a) Read a String
+(b) Display the string
+(c) Reverse the string
+(d) Copy the string into an empty string
+(e) Concatenate two strings
+
+3. Using classes and object, write a program to do the following:
+A = B * C + D
+Where A, B, C, D are 3 x 3 matrices.
+
+4. A class student has three data members : name, roll number, marks of 5 subjects and member functions to assign streams on the basis of table given below:
+Average Marks 	Stream
+96% or more 	Computer Science
+91% - 95% 	Electronics
+86% - 90% 	Mechanical
+81% - 85% 	Electrical
+76% - 80% 	Chemical
+71% - 75% 	Civil
+Declare the class using the above specifications. Also give the detailed member function defition.
+
+5. Imagine a publishing company that markets both book and audio-cassette version of its works. Create a base class called publication that stores the title (a string) and price (type float) of a publication. Create another base class sales that holds an array of three floats so that it can record the sales of a particular publication for the last three months. Include a getdata() function to get three sales amounts from the user and a putdata() function to display the sales figures. Create two classes book which adds a page count (int type) and tape, which adds a playing time (type int) in minutes, derived from both publication and sales, having getdata() and putdata() function for getting data and displaying their data respectively. An object of class
+book or tape should input or output sales along with its other data. Write a program in C++ to create a book object and a tape object for updating their corresponding member data along with the sales made.

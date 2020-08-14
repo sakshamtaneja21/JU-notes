@@ -1,0 +1,62 @@
+It is the process of creating a new class(es) from the existing class(es). The existing class is known as base class and the new class is called the derived class.
+Base Class -> Super Class -> Parent Class -> Ancestor
+Derived Class -> Sub Class -> Child Class -> Descendent
+
+Example:
+--------------
+Automobile is class comparising of cars, buses and scooters all having common properties i.e. engines, wheels, horns. In addition to the features of the base class the subclasses having their own features i.e. scooters use petrol and buses use diesel.
+
+Note: An important feature of object oriented programming i.e inheritance provides reusability. A programmer can use an existing class and without changing it, can add extra features to it. This is achieved by deriving a new class from the exiting class.
+
+Different Forms of Inheritance
+------------------------------------------
+1. Single Level Inheritance: When a derived class inherits only from one base class, it is known as single level inheritance.
+
+2. Multi Level Inheritance: When a derived class inherits from a class that itself inherits from another class, it is known as multi level inheritance.
+
+3. Multiple Inheritance: When a derived class inherits from multiple classes, it is known as multiple inheritance
+
+4. Hierarchical Inheritance: When the properties of one class may be inherited by more the one class, it is known as hierarchical inheritance (tree structure)
+
+5. Hybrid Inheritance: It is a combination of more than two inheritance. Like combination of multiple and multilevel is known as hybrid inheritance.
+
+6. Multipath Inheritance: When a derived class inheritance from multiple base classes and all of its base classes inherit from the single base class, it is known as multiple path inheritance
+
+Virtual Function
+--------------------------
+To achieve run-time polymorphism we use virtual function.
+To perform the method overriding concept in C++, then we have to declare the virtual function in a class.
+Virtual function implement the "one interface, multiple methods" philosophy.
+Virtual Functions are accessed using a pointer of the base class.
+The virtual function within the base class defines the form of the interface to that function.
+It is a function that is declared as virtual in a base class and we redefine it in the derived class.
+It is late binding, run-time binding, dynamic binding
+
+Pure Virtual Function (Abstract class)
+----------------------------------------------------
+A pure virtual function is a virtual function that has no definition within the base class.
+To declare a pure virtual function, we use the syntax:
+virtual datatype func_name(parameter_list)=0;
+Abstract class can't be instantiated
+
+Friend Functions
+---------------------------
+Friend function is used to access the private, protected members of the class.
+
+friend void sum(ONE o, TWO t);
+
+If you define the friend function definition outside the class, then we didn't require
+scope resolution operator.
+
+Friend functions are called as normal function but we have to pass object of the class
+in the friend function as a argument for accessing the private members of the class.
+
+
+
+
+
+
+
+
+
+

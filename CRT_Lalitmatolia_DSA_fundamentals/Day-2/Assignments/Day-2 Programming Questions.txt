@@ -1,0 +1,30 @@
+Problems based on Looping and Arrays and Functions
+---------------------------------------------------------------------------
+1. WAP to print the sum of the following series:
+	sum = 1 + 1/2! + 1/3! + 1/4! + ......... + 1/n!
+
+2. WAP to print the following pyramid using function:
+	A                       A
+	AB                 BA
+	ABC            CBA
+	ABCD     DCBA
+	ABCDEEDCBA
+	ABCD     DCBA
+	ABC            CBA
+                      AB                 BA
+	A                       A
+
+3. WAP to input any any ten values in an array, find the sum of positive numbers, sum of negative numbers, count positive numbers, count negative numbers also.
+
+4. WAP to find the lucky number of the given number
+	I/P: 1234567
+	O/P: 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28 => 2+8 = 10 => 1 + 0 = 1
+
+	I/P: 5598
+	O/P: 5 + 5 + 9 + 8 = 27 = 2 + 7 = 9
+
+5. WAP to print the following pyramid using function
+	1
+	2	3
+	5	7	11
+	13	17	19	23

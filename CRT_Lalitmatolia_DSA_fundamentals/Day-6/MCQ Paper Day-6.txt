@@ -1,0 +1,194 @@
+1. What will be the output of the program?
+#include<stdio.h>
+int func(int);
+int main()
+{
+	int k=35;
+	k=func(k=func(k=func(k)));
+	printf(“%d”,k);
+	return 0;
+}
+int func(int k)
+{
+	k++; // ++k;
+	return k; // return (k++); ==> 35  // return (++k); // 38
+}
+(a) 35
+(b) 36
+(c) 37
+(d) 38
+Correct Answer: D
+
+2.  What will be the output of the program?
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	int i,n;
+	char *x=”Alice”;
+	n=strlen(x);
+	*x=x[n];
+	for(i=0;i<=n;i++)
+	{
+		printf(“%s”,x);
+		x++;
+	}
+	return 0;
+}
+(a) Alice
+(b) ecilA
+(c) Alice lice ice ce e
+(d) lice ice ce e
+
+Correct Answer: d
+
+x = Alice
+x[0]	x[1]	x[2]	x[3]	x[4]	x[5]
+A	l	i	c	e	NULL
+NULL	l	i	c	e	NULL
+1000	1001	1002	1003	1004	1005
+
+n = strlen(x) = 5
+*x = x[5] = NULL
+
+i =0; 0<=5		blank
+	
+i = 1; 1<=5	lice
+i = 2; 2<=5	ice
+i = 3;  3<=5	ce
+i = 4; 4 <= 5	e
+i = 5; 5 <= 5	blank
+
+3. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char *names[]={
+				“Roshni”,
+				“Manish”,
+				“Sona”,
+				“Baiju”,
+				“Ritu”
+			};
+	int i;
+	char *t;
+	t=names[3];
+	names[3]=names[4];
+	names[4]=t;
+	for(i=0;i<=4;i++)
+	printf(“%s”,names[i]);
+}
+(a) Roshni Manish Sona Baiju Ritu
+(b) Roshni Manish Sona Ritu Baiju
+(c) Roshni Manish Baiju Sona Ritu
+(d) Roshni Manish Ritu Sona Baiju
+
+Correct Answer: b
+
+4.  Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	static char mess[6][30]={
+		“Don’t Walk in front of me...”,
+		“I may not follow;”,
+		“Don’t walk behind me...”,
+		“Just walk beside me...”,
+		“And be my friend.”
+	};
+	printf(“%c %c”,*(mess[2]+9),*(*(mess+2)+9));
+}
+(a) t t
+(b) k k
+(c) n k
+(d) m f
+Correct Answer: b
+
+5. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char str[10]=”Angel”;
+	str[6]=’d’;
+	printf(“%s”,str);
+}
+(a) Angel d
+(b) d
+(c) Angel
+(d) Error
+
+Correct Answer: c
+str[0]	str[1]	str[2]	str[3]	str[4]	str[5]	str[6]	str[7]	str[8]	str[9]
+A	n	g	e	l	NULL	d
+Final Answer: Angel
+
+6.  The first argument argc in main() counts
+(a) The number of command line strings including the execution command
+(b) The number of command line strings excluding the execution command
+(c) The number of lines in a program
+(d) The number of characters in a program
+
+Correct Answer:
+
+int main(int argc, char*argv[])
+{
+	
+}
+
+C:\>P1.exe 10 20 30 40 50
+argc = 6
+argv[0] = P1.exe (Program Name => Executable file name)
+argv[1] = 10
+argv[2] = 20
+argv[3] = 30
+argv[4] = 40
+argv[5] = 50
+
+7.  Which statement correctly defines a character string with a length of 4 plus 1 for the terminating NULL?
+(a) char string[];
+(b) char *string;
+(c) char *string[5];
+(d) char string[5];
+
+Correct Answer: D
+
+8. The size of the following union, where an int occupies 4 bytes of memory is
+union arc
+{
+	char x;
+	int y;
+	char ax[8];
+}aha;
+(a) 16 bytes
+(b) 13 bytes
+(c) 8 bytes
+(d) 4 bytes
+Correct Answer: C
+
+9. struct
+{
+	int x;
+	int y;
+}abc;
+You cannot access x by the following:
+1.	abc->x;
+2.	abc[0]->x;
+3.	abc.x;
+4.	(abc)->x;
+Correct Answer: 1, 2, 4
+
+10.  What is the output of the following code?
+union
+{
+	int no;
+	char ch;
+}u;
+u.ch=’2’;
+u.no=0;
+printf(“%d”,u.ch);
+(a) 2
+(b) 0
+(c) NULL Character
+(d) None
+Correct Answer: b
+

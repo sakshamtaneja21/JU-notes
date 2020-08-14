@@ -1,0 +1,188 @@
+1. void main()
+{
+	int i=-5 , j=-2;
+	junk(i,&j);
+	printf(“\ni=%d j=%d”,i,j); 
+}
+junk(int i, int *j)
+{
+	i=i*i;
+	*j=*j * *j;
+}
+
+Correct Answer: i=-5, j=4
+
+2. main()
+{
+        float a[]={13.24,1.5,1.5,5.4,3.5};
+        float *j,*k;
+        j=a;
+        k=a+4;
+       printf(“\n%f %f”, *j, *k);
+}
+
+Correct Answer: 
+
+a[0]	a[1]	a[2]	a[3]	a[4]
+13.24	1.5	1.5	5.4	3.5
+1000	1004	1008	1012	1016
+
+j = a;	j = 1000
+k = a + 4;   k = 1000 + 4 = 1016
+
+*j = *(1000) = 13.240000
+*k = *(1016) = 3.500000
+
+
+main()
+{
+        float a[]={13.24,1.5,1.5,5.4,3.5};
+        float *j,*k;
+        j=a;
+        k=a+4;
+        j= j * 2;
+        k = k / 2;
+       printf(“\n%f %f”, *j, *k);
+}
+Final Answer: Compile Time Error
+
+/*
+1. You can't multiply, divide pointer with constant value.
+2. You can add value in the address and also subtract.
+3. You can't add two address
+4. You can subtract one address from another address
+*/
+
+3. main()
+{
+   int n[25];
+   n[0]=100;
+   n[24]=200;
+   printf(“\n%d %d”,*n, *(n+24) + *(n+0));
+}
+
+Final Answer: 100 300
+
+a[i] = i[a] = *(a+i) = *(i+a)
+a[0] = 0[a]
+*(a+0) = *(0+a)
+*a = *a
+
+n[0] = *(n+0) = *n = 100
+n[24] = *(n+24) = 200
+
+*(n+24) + *(n+0) = 200 + 100 = 300
+
+
+1-D Array
+----------------
+a = Base Address of 1-D Array
+*a = Value at Base Address of 1-D Array
+
+a[i] = i[a] = *(a+i) = *(i+a)
+
+2-D Arrays
+-----------------
+a = Base Address of 2-D Array (Row)
+*a = Base Address of 1-D Array inside 2-D Array (Column)
+**a = Value at Base Address of 1-D Array inside 2-D Array (Value)
+a[i][j] = *(*(a+i)+j)
+
+
+4. main()
+{
+	/*Assume array begins at location 65486*/
+	int arr[5]={12,14,15,23,45};
+      	printf(“%u %u”, arr, &arr);
+	printf(“%u %u”, arr+1, &arr+1);
+}
+int = 2 bytes
+arr[0]	arr[1]	arr[2]	arr[3]	arr[4]
+12	14	15	23	45
+65486	65488	65490	65492	65494	65496
+
+arr = 65486
+&arr = 65486
+arr+1 = 65488
+&arr + 1  = 65496
+
+5. main()
+{
+	/*Assume array begins at address 65472*/
+  	int a[3][4]={
+			1,2,3,4,
+			4,3,2,1,
+			7,8,9,0
+		      };
+	printf(“\n%u %u”, a+1 , &a+1);
+}
+int = 2 bytes
+a = 65472
+a + 1 = 65480
+&a + 1 = 65496
+
+6. void main()
+{
+       int b[]={10,20,30,40,50};
+       int i, *k;
+       k= &b[4]-4;
+       for(i=0;i<=4;i++)
+       {
+             printf(“%d”, *k);
+             k++;
+       }
+}
+
+b[0]	b[1]	b[2]	b[3]	b[4]
+10	20	30	40	50
+1000	1004	1008	1012	1016     1020
+
+k = &b[4] - 4 = 1016 - 4 = 1000
+k = &*(b+4) - 4 = b + 4 - 4 = b = 1000
+
+i=0; 0<=4
+	*k = *(1000) = 10
+i=1; 1<=4
+	*k = *(1004) = 20
+i=2; 2<=4
+	*k = *(1008) = 30
+i=3; 3<=4
+	*k = *(1012) = 40
+i=4; 4<=4
+	*k = *(1016) = 50
+i=5; 5<=4 X
+Final Answer: 10  20  30  40  50
+
+7. void main()
+{
+        char a[]=“Visual C++”;
+        char *b=“Visual C++”;
+        printf(“\n%d  %d”,sizeof(a),sizeof(b));
+        printf(“\n%d   %d”,sizeof(*a),sizeof(*b));
+}
+
+Correct Answer: 
+sizeof(a) = 11
+sizeof(b) = 8 (dev-cpp)
+sizeof(*a) = sizeof(V) = 1
+sizeof(*b) = sizeof(V) = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

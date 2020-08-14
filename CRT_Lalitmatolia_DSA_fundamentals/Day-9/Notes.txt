@@ -1,0 +1,155 @@
+Dynamic Memory Allocation
+---------------------------------------------
+These functions are defined in stdlib.h (standard library) header file.
+1. malloc() - It stands for memory allocation method in C is used to dynamically allocate a single large block of memory with the specified size. It returns the void* and it can be cast to any pointer variable. It initializes each block with default garbage value.
+	Syntax:
+		(void*)malloc(n*sizeof(data-type));
+		n = number of elements
+
+	int *ptr = (int*)malloc(50*sizeof(int));
+Here, we take the size of int as 4 bytes, this segment will allocate 200 bytes of memory and pointer ptr holds the address of first byte in the allocated memory.
+	char *ch = (char*)malloc(10*sizeof(char));
+	float *f = (float*)malloc(10*sizeof(float));
+	
+	struct node
+	{
+		int data;
+		struct node *next; // self-referential structure
+	}*START=NULL;
+
+	START = (struct node*)malloc(sizeof(struct node));
+	
+	struct node *q = (struct node*)malloc(sizeof(struct node));
+
+self-referential structure: It is pointing to the same type of node which is having the structure as per the declaration
+If space is insufficient, allocation fails and it retuns a NULL pointer.
+
+2. calloc(): It stands for contiguous memory allocation method in C is used to dynamically allocate
+the specified number of block of memory of the specified type. It initializes each block with a default
+value as 0.
+	(void*)calloc(n, element-size);
+	
+	int *ptr = (int*)calloc(20, sizeof(int));
+	int *ptr = (int*)calloc(5, sizeof(int));
+If space is insufficient, allocation fails and it retuns a NULL pointer.
+
+3. realloc(): It stands for reallocation is used to dynamically change the memory allocation of a 
+previously allocated memory.
+	int *ptr = (int*)malloc(10*sizeof(int));
+	
+	ptr = realloc(ptr, 20 * sizeof(int));
+If space is insufficient, allocation fails and it retuns a NULL pointer.
+	int *ptr = (int*)calloc(5*sizeof(int));
+	ptr = realloc(ptr, 20*sizeof(int));
+
+4. free(): This method in C is used to de-allocate or free the memory which was allocated by
+malloc() or calloc().
+	free(ptr);
+
+Linked List: 
+-------------------
+1. Singly Linked List
+2. Doubly Linked List
+3. Circular Linked List
+4. Doubly Circular Linked List (Two-Way Circular Linked List)
+
+Structure for singly linked list and circular linked list
+----------------------------------------------------------------------------------
+struct node
+{
+	int data;
+	struct node *next;
+}*START=NULL;
+
+Structure for doubly linked list and Doubly Circular Linked List
+----------------------------------------------------------------------------------------------
+struct node
+{
+	int data;
+	struct node *prev;
+	struct node *next;
+}*START=NULL;
+
+STACK
+-------------
+It is the data structure which works on FILO (First In Last Out) or LIFO (Last In First Out)
+All the recursive functions are solved by using STACK.
+
+int TOP = -1; //This is the global variable, which indicates the TOP of the STACK
+
+Operation with Stack
+-----------------------------------
+1. Push Operation: To insert a new element at the top of the stack
+		TOP = TOP + 1
+2. Pop Operation: To remove an element from the top of the stack
+		TOP = TOP - 1
+3. Display Operation: To print the elements from TOP to BOTTOM
+
+4. Peek Operation: To print the topmost element of the STACK
+
+5. Empty Operation: To check the stack is empty or not
+
+6. Search Operation: To find the element is present or not in the stack
+
+Underflow, Overflow
+---------------------------------
+Overflow -> When you add a new element in the full stack.
+Underflow -> When you want to delete an element after the stack is empty
+
+Implementation of STACK
+----------------------------------------
+1. Using Array
+2. Using LinkedList
+
+Push Operation
+--------------------------
+1. To check whether the stack is full or not
+	if(TOP == MAX - 1), then print: "Stack Overflow"
+2. To increment TOP by 1
+	TOP = TOP + 1
+3. Store the element at the TOP location of the stack
+	STACK[TOP] = num
+4. Return
+
+Pop Operation
+-----------------------
+1. To check whether the stack is empty or not
+	if (TOP == -1), then print: "Stack Underflow"
+2. To get the number from the TOP of the stack and store in a num variable
+	num = STACK[TOP]
+	and print it
+3. To decrement the TOP by 1
+	TOP = TOP - 1
+4. Return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

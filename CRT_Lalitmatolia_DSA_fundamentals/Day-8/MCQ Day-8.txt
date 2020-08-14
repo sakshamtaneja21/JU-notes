@@ -1,0 +1,90 @@
+1. How can we make a class abstract?
+A. By making all member functions constant.
+B. By making at least one member function as pure virtual function.
+C. By declaring it abstract using the static keyword.
+D. By declaring it abstract using the virtual keyword.
+Correct Answer:
+
+2. Which of the following statements is correct about the constructors and destructors?
+A. Destructors can take arguments but constructors cannot.
+B. Constructors can take arguments but destructors cannot.
+C. Destructors can be overloaded but constructors cannot be overloaded.
+D. Constructors and destructors can both return a value.
+Correct Answer:
+
+3. Which of the following access specifies is used in a class definition by default?
+A. Protected
+B. Public
+C. Private
+D. Friend
+Correct Answer:
+
+4. Which of the following statement is correct with respect to the use of friend keyword inside a class?
+A. A private data member can be declared as a friend.
+B. A class may be declared as a friend.
+C. An object may be declared as a friend.
+D. We can use friend keyword as a class name.
+Correct Answer:
+
+5. Which of the following statements about virtual base classes is correct?
+A. It is used to provide multiple inheritance.
+B. It is used to avoid multiple copies of base class in derived class.
+C. It is used to allow multiple copies of base class in a derived class.
+D. It allows private members of the base class to be inherited in the derived class.
+Correct Answer:
+
+6. How many objects can be created from an abstract class?
+A. Zero
+B. One
+C. Two
+D. As many as we want
+Correct Answer:
+
+7. Which of the following can be overloaded?
+A. Object
+B. Functions
+C. Operators
+D. Both B and C
+Correct Answer:
+
+8. Which of the following is the only technical difference between structures and classes in C++?
+A. Member function and data are by default protected in structures but private in classes.
+B. Member function and data are by default private in structures but public in classes.
+C. Member function and data are by default public in structures but private in classes.
+D. Member function and data are by default public in structures but protected in classes.
+Correct Answer:
+
+9. Which of the following statements are correct for a static member function?
+	1. It can access only other static members of its class.
+	2. It can be called using the class name, instead of objects.
+A. Only 1 is correct.
+B. Only 2 is correct.
+C. Both 1 and 2 are correct.
+D. Both 1 and 2 are incorrect.
+Correct Answer:
+
+10. What will be the output of the following program?
+#include<iostream>
+using namespace std; 
+struct MyData
+{
+    public:
+    int Addition(int a, int b = 10)
+    {
+        return (a *= b + 2);
+    }
+    float Addition(int a, float b);
+};
+int main()
+{
+    MyData data;
+    cout<<data.Addition(1)<<" ";
+    cout<<data.Addition(3, 4);
+    return 0; 
+}
+A. 12 12
+B. 12 18
+C. 3 14
+D. 18 12
+E. Compilation fails.
+Correct Answer:

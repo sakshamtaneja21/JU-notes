@@ -1,0 +1,10 @@
+Q1: A
+Q2: C
+Q3: A
+Q4: C
+Q5: D
+Q6: A
+Q7: B
+Q8: A
+Q9: C
+Q10: D

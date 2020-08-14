@@ -1,0 +1,9 @@
+1. WAP in C/C++ using function/methods to delete an element from the specific position of the linked list
+
+2. WAP in C/C++ using function/methods to find the sum of all the nodes and print how many nodes are even and how many nodes are odd.
+
+3. WAP in C/C++ using function/methods to implement the queue using array and linked list.
+
+4. WAP in C/C++ using function/methods to reverse the singly linked list
+
+5. WAP in C/C++ using function/methods to search an element into the linked list

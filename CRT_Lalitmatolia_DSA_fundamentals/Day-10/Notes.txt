@@ -1,0 +1,247 @@
+Queue
+----------
+It is the data structure which works on FIFO (First In First Out) or LILO (Last In Last Out)
+
+#define MAX 10
+int FRONT = -1;
+int REAR = -1;
+
+int QUEUE[MAX];
+
+Example:
+1. A queue at ticket window
+2. Phone Answering System
+3. A Queue at Toll Tax Bridge
+4. CPU Scheduling
+
+If you delete from the queue, then FRONT variable incremented.
+If you insert into the queue, then REAR variable incremented.
+
+To check for empty condition
+--------------------------------------------
+If FRONT == -1, then Queue is Empty
+
+To check for queue full
+------------------------------------
+IF FRONT == 0  && REAR == MAX-1
+	then print "Queue is FULL"
+
+If FRONT == REAR, the queue is having at most one element in the queue
+
+Operation with Queue
+----------------------------------
+1. Queue Insert
+	To check for Queue full,
+		if FRONT == 0 && REAR == MAX - 1, then print "Queue Full"
+	To check another condition
+		if (FRONT  == -1) then set FRONT = REAR = 0
+	Increment REAR variable by 1
+		REAR = REAR + 1
+	Store the current value at REAR index
+		QUEUE[REAR] = num
+2. Queue Delete
+3. Queue Display
+
+Searching: To check the given element is present or not in an array or linked list.
+1. Linear Search: To traverse the list from beginning to end O(n)
+2. Binary Search:
+	1. The list must be in sorted order
+	2. You can directly access the middle element of the array
+		middle = (beg + end)/2
+	3. Complexity for Binary Search O(logn)
+
+Sorting: To arrange the elements in ascending or descending order.
+1. Bubble Sorting
+2. Selection Sorting
+3. Insertion Sorting
+4. Merging/Merge Sorting
+5. Quick Sorting
+6. Radix Sorting
+
+Time Complexity for the Algorithms
+------------------------------------------------------
+Algorithm complexity is a rough approximation of the number of steps, which will be executed depending on the size of the input data. Complexity gives the order of steps count, not their exact count.
+
+Finding the complexity of different problems:
+A()
+{
+	int i;
+	for(i=1 to n)
+		PF("Lalit Matoliya");
+}
+
+Complexity of this Algorithm: O(n)
+
+A()
+{
+	int i, j;
+	for(i=1 to n)
+	{
+		for(j=1 to n)
+			PF("Lalit Matoliya");
+	}
+}
+Complexity of this Algorithm: O(n^2)
+
+A()
+{
+	int i, j, k;
+	for(i=1 to n)
+	{
+		for(j=1 to n)
+		{
+			for(k=1 to n)
+				PF("Lalit Matoliya");
+		}
+	}
+}
+Complexity of this Algorithm: O(n^3)
+
+A()
+{
+	i=1, s=1;
+	while(s<=n)
+	{
+		i++;	// i gets incremented linearly
+		s = s + i;    // but S value depends upon i
+		PF("Lalit Matoliya");
+	}
+}
+
+S:	1	3	6	10	15	21	28	n
+I:	1	2	3	4	5	6	7	k
+
+S value is the sum of the natural number
+	s = 1 + 2 + 3 + 4 + 5 + ............ + n
+	k(k+1)/2 > n
+	(k^2 + k)/2 > n
+	Order we have to maximum
+	k^2 > n
+	k = sqrt(n)
+
+	O(sqrt(n))
+
+A()
+{
+	int i, j, k, n;
+	for(i=1; i<=n; i++)
+	{
+		for(j=1; j<=i; j++) // Dependent Loop
+		{
+			for(k=1; k<=100; k++) // Independent Loop
+			{
+				PF("Lalit Matoliya");
+			}
+		}
+	}
+}
+
+Step-I
+-----------
+i = 1;
+j = 1 time
+k = 100 times
+
+Step-II
+-----------
+i = 2
+j = 2 times
+k = 2 x 100 times = 200 times
+
+Step-III
+------------
+i = 3
+j = 3 times
+k = 3 x 100 times = 300 times
+
+Step-n
+-----------
+i = n
+j = n times
+k = n x 100 times
+
+=> 100 + 2 x 100 + 3 x 100 + 4 x 100 + .........+ n x 100
+=> 100(1 + 2 + 3 + 4 + 5 + .....+ n)
+=> 100[n * (n +1)/2]
+=> (n^2 + n)/2
+=> O(n^2)
+
+A()
+{
+	int i, j, k, n;
+	for(i=1; i<=n; i++)	// n times
+	{
+		for(j=1; j<=i^2; j++) // dependent loop: on i it depends
+		{
+			for(k=1; k<=n/2; k++)  // Indendent loop
+			{
+				PF("Lalit Matoliya");
+			}
+		}
+	}
+}
+
+Step-1
+-----------
+i = 1
+j = 1 time
+k = n/2 x 1
+
+Step-2
+-----------
+i = 2
+j = 4 times
+k = n/2 x 4
+
+Step-3
+-----------
+i=3
+j = 9 times
+k = n/2 x 9
+
+Step-n
+-----------
+i = n
+j = n^2 times
+k  = n/2 *n^2
+
+=> n/2x1 + n/2x4 + n/2x9 + ..........+n/2xn^2
+=>n/2[1 + 4 + 9 + 16 + .......+ n^2]
+=>n/2[n(n+1)(2n+1)/6]
+=> O(n^4)
+
+A()
+{
+	for(i=1; i<n; i = i * 2)		// Increment is not linear, it is multiplied by 2
+		PF("Lalit Matoliya");
+}
+
+A()
+{
+	int i, j, k;
+	for(i=n/2; i<=n; i++)    // n/2 times
+	{
+		for(j=1; j<=n/2; j++)  // n/2 times
+		{
+			for(k=1; k<=n; k=k*2)  // logn
+				PF("Lalit Matoliya");
+		}
+	}
+}
+
+A()
+{
+	int i, j, k;
+	for(i=n/2; i<=n; i++)  // n/2 times
+	{
+		for(j=1; j<=n; j = 2 * j)
+		{
+			for(k=1; k<=n; k = k *2)
+				PF("Lalit Matoliya");
+		}
+	}
+}
+
+
+
+

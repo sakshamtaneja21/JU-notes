@@ -1,0 +1,23 @@
+1. WAP using C++ to Store the 5 students records using array of structure and print the record on the screen.
+
+2. WAP using C++ to perform the following operation using recursion.
+	1. Find the factorial of the given number
+	2. Find the Reverse of the given number
+	3. Print the fibonacci series using recursion
+	4. Find the result for one number raise to power another number
+
+3. WAP in C++ to print the following pyramid
+		A
+	                   BA
+                                       CBA
+                                    DCBA
+                                  EDCBA
+
+4. WAP in C++ to swap the three numbers without using arithmetic operator and without using temp variable.
+
+5. WAP in C++ to print the following pyramid
+	1                    1
+	12               21
+	123          321
+	1234     4321
+	1234554321

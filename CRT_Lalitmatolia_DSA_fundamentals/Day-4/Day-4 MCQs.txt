@@ -1,0 +1,153 @@
+1. A pointer is
+(a) A keyword used to create variables.
+(b) A variable that stores address of an instruction.
+(c) A variable that stores address of other variables.
+(d) All of the above
+Correct Answer: C
+int a = 10, *p;
+p = &a;
+
+2. Which of the following statement is correct about the program given below?
+#include<stdio.h>
+void main()
+{
+	int i=10;
+	int *j=&i;
+}
+(a) j and i are pointers to an int.
+(b) i is a pointer to an int and stores address of j.
+(c) j is a pointer to an int and stores address of i.
+(d) j is a pointer to a pointer to an int and stores address of i.
+Correct Answer: C
+
+3. Which statement will you add to the following program to ensure that the program outputs “AGRA-JECR” on execution?
+#include<stdio.h>
+void main()
+{
+		char s[]=”AGRA-JECR”;
+		char t[25];
+		char *ps,*pt;
+		ps=s;
+		pt=t;
+		while(*ps)
+			*pt++=*ps++;
+		/*add suitable statement here*/
+		printf(“%s”,t);
+}
+(a)	*pt=’\0’;
+(b)	*pt=NULL;
+(c)	Both (a) or (b)
+(d)	Error
+Correct Answer: C
+
+4. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char str1[]=”Bombay”;
+	char str2[]=”Pune”;
+	char *s1=str1,*s2=str2;
+	while(*s1++=*s2++);
+	printf(“%s”,str1);
+}
+(a) Bombay Pune
+(b) Pune
+(c) Bombay
+(d) (null)
+Correct Answer: B
+
+str1[0]	str1[1]	str1[2]	str1[3]	str1[4]	str1[5]	str1[6]
+P	u	n	e	NULL	y	NULL
+1000	1001	1002	1003	1004	1005	1006
+
+str2[0]	str2[1]	str2[2]	str2[3]	str2[4]
+P	u	n	e	NULL
+2000	2001	2002	2003	2004
+
+5. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	int arr[5],i=0;
+	while(i<5)
+		arr[i]=++i;
+	for(i=0;i<5;i++)
+		printf(“%d”,arr[i]);
+}
+(a)	1 2 3 4 5
+(b)	Garbage Value 1 2 3 4
+(c)	0 1 2 3 4
+(d)	2 3 4 5 6
+Correct Answer: B
+
+6. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	int arr[1]={10};
+	printf(“%d”,0[arr]);
+}
+(a)	1
+(b)	10
+(c)	0
+(d)	None of the above
+Correct Answer: B
+
+7. Which of the following statements are correct about 6 used in the following C expressions?
+int num[6];
+num[6]=21;
+(a)	In the first statement 6 specifies a particular element, whereas in the second statement it specifies a type.
+(b)	In the first statement 6 specifies the array size, whereas in the second statement it specifies a particular element of the array.
+(c)	In the first statement 6 specifies a particular element, whereas in the second it specifies the array size.
+(d)	In both the statements 6 specifies array size.
+(e)	In the first statement 6 specifies array size, whereas in the second statement it specifies that the array size be increased from 6 to 21.
+Correct Answer: B
+
+8. What will be the output of the following program, if the array begins at address 1200 in memory?
+#include<stdio.h>
+void main()
+{
+	int arr[]={2,3,4,1,6};
+	printf(“%u %u %u”,arr,&arr[0],&arr);
+}
+(a)	1200 1200 1200
+(b)	1200 1202 1200
+(c)	1200 1210 1200
+(d)	1200 1204 1200
+Correct Answer: A
+
+9. What will be the output of the following program, if the array begins at 65486 and each integer occupies 2 bytes?
+#include<stdio.h>
+void main()
+{
+	int arr[]={12,14,15,23,45};
+	printf(“%u %u”,arr+1,&arr+1);
+}
+(a)	65488 65490
+(b)	65488 65492
+(c)	65488 65496
+(d)	65488 65494
+Correct Answer: C
+
+arr[0]	arr[1]	arr[2]	arr[3]	arr[4]
+12	14	15	23	45
+65486	65488	65490	65492	65494	65496
+arr = 65486
+arr + 1 = 65488
+&arr + 1 = 65496
+
+10. What will be the output of the following program?
+#include<stdio.h>
+void main()
+{
+	float a[]={12.4,2.3,4.5,6.7};
+	printf(“\n%d”,sizeof(a)/sizeof(a[0]));
+}
+(a)	4
+(b)	8
+(c)	2
+(d)	16
+Correct Answer:  A
+
+
+

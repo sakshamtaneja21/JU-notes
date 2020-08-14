@@ -1,0 +1,73 @@
+1. Let J and K be integers and suppose Q ( J, K) is recursively defined by
+	Q (J, K) =         5		if J < K
+		      Q(J-K, K+2) + J       if J ≥ K
+
+Find Q (2, 7), Q (5,3) and Q (15,2)
+
+
+
+2. Let N be an integer and suppose H(N) is recursively defined by
+	  H(N) =   3 * N 		if N < 5
+ 	                   2 * H (N-5) +7	otherwise
+
+Find H(2), H(8) and H(24)
+
+
+
+3. What is the value printed by the following C program?
+#include<stdio.h>
+int f(int *a, int n)
+{
+	if(n<=0)
+		return 0;
+	else if(*a%2==0)
+		return *a + f(a+1,n-1);
+	else
+		return *a –f(a+1,n-1);
+}
+int main()
+{
+	int a[]={12,7,13,4,11,6};
+	printf(“%d”,f(a,6));
+	return 0;
+}
+
+
+4. What is the output of the following code?
+int cap(int);
+main()
+{
+	int n;
+	n=cap(6);
+	printf(“%d”,n);
+}
+int cap(int n)
+{
+	if(n<=1)
+		return 1;
+	else
+		return(cap(n-3)+cap(n-1));
+}
+
+
+
+5. What is the output of the following code?
+main()
+{
+	printf(“%d”,sum(5));
+}
+int sum(int n)
+{
+	if(n<1)
+		return n;
+	else
+		return (n+sum(n-1));
+}
+
+
+
+
+
+
+
+

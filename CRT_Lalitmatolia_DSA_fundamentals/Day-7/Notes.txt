@@ -1,0 +1,146 @@
+static data members
+-------------------------------
+1. It is generally used to store values common to the whole class.
+2. Only a single copy of the static data member is used by all the objects.
+3. It can be used within the class but its lifetime is the whole program.
+For making a data member static, we require
+1. Declare it within the class
+2. Define it outside the class
+
+class student
+{
+	static int count; // declaration within the classs (static data member)
+};
+// DataType ClassName :: VariableName = Value;
+int student :: count = 0;
+
+Scope Resolution Operator
+------------------------------------------
+1. To print the global Variable's Value
+2. To give the definition of the method outside the class
+3. To give the value to static data member outside the class
+4. To call the static member function, we can also use scope resolution operator
+
+Constructor
+------------------
+A constructor (having the same name as that of the class) is a member function which is automatically used to initialize the objects
+of the class type with legal initial value.
+1. These are called automatically when the objects of the class are created.
+2. All objects of the class having a constructor are initialized before some use.
+3. These should be declared in the public section for availability to all the functions.
+4. Return type (not even void) cannot be specified for the constructor.
+5. You can pass arguments to the constructor
+6. If you define same name constructor multiple time in a single class then it is known as constructor overloading
+7. These cannot be inherited, but a derived class can call the base class constructor
+8. These cannot be static
+9. The address of constructor cannot be taken
+10. These cannot be virtual
+11. These make implicit calls to the memory allocation and deallocation operators new and delete
+
+Copy Constructor: It is the form classname(classname &) and used for the initialization of an object from the another object of same
+type.
+
+1. Shallow Copy: A shallow copy of an object copies all of the member field values. This works
+	well if the fields are values, but may not be what you want for fields that point to 
+	the dynamically allocated value.
+
+2. Deep Copy:
+	A deep copy copies all the fields, and makes copies of dynamically allocated memory
+	pointed to by the fields.
+
+
+Destructor in C++
+------------------------------
+These are the functions that are complimentary to constructors. These are used to de-initialize
+objects when they are destroyed. A destructor is called when an object of the class goes out of 
+scope, or when the memory space used by it is deallocated with the help of delete operator.
+
+1. These are called automatically when the objects are destroyed
+2. You have to use ~ (tilde) symbol before destructor
+3. Destructor functions follow the usual access rules as other member functions
+4. These de-initialize each object before the object goes out of scope
+5. No argument and no return type (even void) permitted with destructor
+6. These cannot be inherited
+7. Static destructors are not allowed
+8. Address of a destructor cannot be taken
+9. A destructor can call member functions of its class
+	~name_of_the_class()
+	{
+	}
+
+Function Overloading
+----------------------------------------
+Polymorphism = Many Forms
+
+In a same class, if same name function defined multiple times with different arguments then
+it is known as function overloading.
+
+Constructor Overloading
+---------------------------------------
+If you define multiple constructor with the same name and different arguments in the same class
+then it is known as constructor overloading.
+
+Operator Overloading
+--------------------------------------
+If you define the multiple definition to operator, and its works differently, then it is known as
+operator overloading
+	int a = 10, b=20, c;
+	c  = a + b;
+	cout<<c<<endl;
+
+	Sample s1, s2, s3;
+	s3 = s1 + s2;
+
+The mechanism of providing additional meaning to an operator is known as operator overloading.
+
+Defining operator overloading
+------------------------------------------------
+Inside the class
+returntype operator op(parameter-list)
+{
+	//code
+}
+
+Outside the class
+returntype name_of_class::operator op(parameter-list)
+{
+	//code
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

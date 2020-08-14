@@ -1,0 +1,70 @@
+1. Destructor has the same name as the constructor and it is preceded by ______ .
+A. !
+B. ?
+C. ~
+D. $
+Correct Answer:
+
+2. Which of the following statement is correct?
+A. Constructor has the same name as that of the class.
+B. Destructor has the same name as that of the class with a tilde symbol at the beginning.
+C. Both A and B.
+D. Destructor has the same name as the first member function of the class.
+Correct Answer:
+
+3. Copy constructor must receive its arguments by __________ .
+A. either pass-by-value or pass-by-reference
+B. only pass-by-value
+C. only pass-by-reference
+D. None of these
+Correct Answer:
+
+4. How many default constructors per class are possible?
+A. Only one
+B. Two
+C. Three
+D. Unlimited
+Correct Answer:
+
+5. Which of the following statement is correct about destructors?
+A. A destructor has void return type.
+B. A destructor has integer return type.
+C. A destructor has no return type.
+D. A destructors return type is always same as that of main().
+Correct Answer:
+
+6. Destructor calls are made in which order of the corresponding constructor calls?
+A. Reverse order
+B. Forward order
+C. Depends on how the object is constructed
+D. Depends on how many objects are constructed
+Correct Answer:
+
+7. Which of the following statement is correct about constructors?
+A. A constructor has a return type.
+B. A constructor cannot contain a function call.
+C. A constructor has no return type.
+D. A constructor has a void return type.
+Correct Answer:
+
+8. Which of the following statement is correct whenever an object goes out of scope?
+A. The default constructor of the object is called.
+B. The parameterized destructor is called.
+C. The default destructor of the object is called.
+D. None of the above.
+Correct Answer:
+
+9. Which of the following statement is correct?
+A. Class is an instance of object.
+B. Object is an instance of a class.
+C. Class is an instance of data type.
+D. Object is an instance of data type.
+Correct Answer:
+
+10. What is correct about the static data member of a class?
+A. A static member function can access only static data members of a class.
+B. A static data member is shared among all the object of the class.
+C. A static data member can be accessed directly from main().
+D. Both A and B.
+Correct Answer:
+

@@ -1,0 +1,86 @@
+Q1: Which of the following statement(s) about stack data structure is/are NOT correct?
+1. Stack data structure can be implemented using linked list
+2. New node can only be added at the top of the stack
+3. Stack is the FIFO data structure
+4. The last node at the bottom of the stack has a NULL link
+Correct Answer:
+
+Q2: Consider the linked list implementation of a stack. Which of the following node is considered as TOP of the stack?
+1. First Node
+2. Last Node
+3. Any Node
+4. Middle Node
+Correct Answer:
+
+Q3: Consider the following operation performed on a stack of size 5.
+Push(1);
+Pop();
+Push(2);
+Push(3);
+Pop();
+Push(4);
+Pop();
+Pop();
+Push(5);
+After the completion of all operation, the no of element present on stack are
+1. 1
+2. 2
+3. 3
+4. 4
+Correct Answer:
+
+Q4: Which data structure is used for implementing recursion?
+1. Queue
+2. Stack
+3. Array
+4. List
+Correct Answer:
+
+Q5: Which of the following is true about linked list implementation of stack?
+1. In push operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from end.
+2. In push operation, if new nodes are inserted at the end, then in pop operation, nodes must be removed from the beginning.
+3. Both of the above
+4. None of the above
+Correct Answer:
+
+Q6: In the stack, If user try to remove element from the empty stack then it called as ___________.
+1. Underflow of Stack
+2. Garbage Collection
+3. Overflow of Stack
+4. Empty Collection
+Correct Answer:
+
+Q7: Linked list is considered as an example of ___________ type of memory allocation.
+1. Dynamic
+2. Static
+3. Compile Time
+4. None of the mentioned
+Correct Answer:
+
+Q8: Linked list data structure offers considerable saving in
+1. Computational Time
+2. Space Utilization
+3. Space Utilization and Computational Time
+4. None of the mentioned
+
+Q9: What does the following function do for a given Linked List with first node as head?
+void fun1(struct node* head)
+{
+  if(head == NULL)
+    return;
+  
+  fun1(head->next);
+  printf("%d  ", head->data);
+}
+1. Prints all nodes of linked lists
+2. Prints all nodes of linked list in reverse order
+3. Prints alternate nodes of Linked List
+4. Prints alternate nodes in reverse order
+Correct Answer:
+
+10. Which of the following points is/are true about Linked List data structure when it is compared with array?
+1. It is easy to insert and delete elements in Linked List
+2. Random access is not allowed in a typical implementation of Linked Lists
+3. The size of array has to be pre-decided, linked lists can change their size any time.
+4. All of the above
+Correct Answer:

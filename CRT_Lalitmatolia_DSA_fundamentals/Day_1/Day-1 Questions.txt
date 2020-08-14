@@ -1,0 +1,56 @@
+int main()
+{
+	char ch = 126;
+	ch = ch + 4;
+	printf("%d", ch);
+	return 0;
+}
+Final Answer: -126
+126 + 1 = 127 => 127  (Range of char: -128 to +127)
+126 + 2 = 128 => -128
+126 + 3 = 129 => -127
+126 + 4 = 130 => -126
+
+16-bits compiler
+int main()
+{
+	int x = 32767;
+	x = x + 3;
+	printf("%d", x);
+}
+
+Final Answer: -32766
+
+printf("Hello");
+
+int x = 10, y = 20;
+printf("X=%d Y=%d", x, y); // X=10 Y=20
+
+int a, b, c;
+printf("Enter any two numbers");
+scanf("%d%d",&a, &b);
+c = a + b;
+printf("C=%d", c);
+
+If a = 10, b = 20, c = 30
+
+printf("%d",printf("JECRCJU")); //JECRCJU7
+
+int a, b, c;
+printf("%d",scanf("%d%d%d",&a,&b,&c)); // 3
+
+int a, b;
+printf("%d",scanf("%d%d",&a,&b)); // 2
+
+a = 10, b = 20, c = 30
+
+int x = 013, y=0x1A, z=0X3C;
+printf("X=%d Y=%d Z=%d",x, y, z);
+
+int x=017, y=0xA2, z=0X2C;
+printf("X=%d Y=%d Z=%d", x, y, z);
+
+
+
+
+

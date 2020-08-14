@@ -1,0 +1,85 @@
+void main()
+{
+	char ch = 127;
+	ch = ch + 2;
+	printf("%d", ch);
+}
+
+ch = 127 + 2 = 129
+
+127+1 = 128 => -128
+127+2 = 129 => -127
+
+void main()
+{
+	int a = 32767; //this on 16-bits compiler
+	a = a + 3;
+	printf("%d", a);
+}
+
+32767 + 1 = 32768 => -32768
+32767 + 2 = 32769 => -32767
+32767 + 3 = 32770 => -32766
+
+printf("Hello World");
+
+printf("%d", printf("Welcome")); // Welcome7
+
+void main()
+{
+	int a, b, c;
+	printf("Enter any two numbers");
+	scanf("%d%d", &a, &b);
+	c = a + b;
+	printf("%d", c);
+}
+
+int a, b;
+printf("%d",scanf("%d%d",&a,&b)); // 2
+
+int a = 4, b=3;
+printf("%d", a % b);	// 1
+printf("%d", -a % b) // -1
+printf("%d", a % -b); // 1
+printf("%d", -a % -b); // -1
+
+Remainder Rule:
++ve % +ve = +ve
+-ve % +ve = -ve (Sign will depend upon the numerator part)
++ve % -ve = +ve
+-ve % -ve = -ve (Sign will depen upon the numerator part)
+
+printf("%d", a / b);  // 1
+printf("%d", -a / b) // -1
+printf("%d", a / -b); // -1
+printf("%d", -a / -b); // 1
+
+Division Rule:
+----------------------
++ve / +ve = +ve
+-ve / +ve = -ve
++ve / -ve = -ve
+-ve / -ve = +ve
+
+int a = 015, b = 0x2A;
+printf("A=%d B=%d", a, b);
+
+0 -> Octal Number
+0x or 0X --> Hexadecimal Number
+
+Final Answer: A=13 B=42
+
+int a=0x3C, b=017;
+printf("A=%d B=%d", a, b);
+
+
+int a = 100, b = 200, c = 300;
+printf("%d%d%d"); // 300 200 100
+
+printf("%d%d%d",a, b, c);  // 100 200 300
+
+
+
+
+
+

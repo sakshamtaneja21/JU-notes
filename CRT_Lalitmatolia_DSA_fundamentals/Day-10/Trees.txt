@@ -1,0 +1,12 @@
+PreOrder (NLR): ABDEFCGHJLK
+InOrder(LNR): DBFEAGCLJHK
+PostOrder(LRN): DFEBGLJKHCA
+
+BST (Binary Search Tree)
+-------------------------------------
+Root node is greater than its left children and smaller than
+right children.
+
+LeftNode < Root or RightNode > Root
+
+15	5	30	45	17	19	1	6

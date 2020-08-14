@@ -1,0 +1,316 @@
+1. What will be the output of the following program?
+#include<iostream>
+using namespace std; 
+class Test
+{
+    int x; 
+    public:
+    Test(int xx, float yy)
+    {
+        cout<<char(yy);
+    } 
+}; 
+int main()
+{
+    Test *p = new Test(35, 99.50f);
+    return 0; 
+}
+A. 99
+B. ASCII value of 99
+C. Garbage value
+D. 99.50
+
+Correct Answer: B
+
+2. Which of the following statement is correct about the program given below?
+#include<iostream>
+using namespace std;
+class Test
+{
+    public:
+    Test()
+    {
+        cout<< "Lalit";
+    }
+    ~Test()
+    {
+        cout<< "Matoliya";
+    }
+};
+int main()
+{
+    Test ob;
+    return 0; 
+}
+A. The program will print the output Lalit.
+B. The program will print the output Matoliya.
+C. The program will print the output LalitMatoliya.
+D. The program will report compile time error.
+Correct Answer: C
+
+
+
+
+
+
+3. Which of the following statement is correct about the program given below?
+#include<iostream>
+using namespace std; 
+class Test
+{
+    int x; 
+    public:
+      Test();
+     ~Test();
+      void Show();
+};
+Test::Test()
+{
+    x = 25;
+}
+void Test::Show()
+{
+    cout<<x;
+}
+int main()
+{
+    Test ob;
+    ob.Show();
+    return 0; 
+}
+A. The program will print the output 25.
+B. The program will print the output Garbage-value.
+C. The program will report compile time error.
+D. The program will report runtime error.
+
+Correct Answer: C
+
+4. #include<iostream>
+using namespace std; 
+class Test
+{
+      int x; 
+    public:
+      Test();
+      void Show();
+      ~Test();
+};
+Test::Test()
+{
+    x = 5;
+}
+Test::~Test(){}
+void Test::Show()
+{
+    cout<<x;
+}
+int main()
+{
+    Test ob;
+    ob.Show();
+    return 0; 
+}
+
+A. The program will print the output 5.
+B. The program will print the output Garbage-value.
+C. The program will report compile time error.
+D. The program will report runtime error.
+
+Correct Answer: A
+
+5. What will be the output of the following program?
+#include<iostream>
+using namespace std; 
+int val = 0; 
+class Test
+{
+    public: 
+    Test()
+    {
+        cout<<++val;
+    }
+    ~Test()
+    {
+        cout<<val--; 
+    } 
+}; 
+int main()
+{
+    Test o1, o2, o3;
+    {
+        Test o4;
+    } 
+    return 0;
+}
+A. 1234
+B. 4321
+C. 12344321
+D. 12341234
+E. 43211234
+Correct Answer: C
+
+6. Which of the following statement is correct about the program given below?
+#include<iostream>
+using namespace std; 
+class Test
+{
+    int *p; 
+    public:
+    Test(int xx, char ch)
+    {
+        p  = new int(); 
+        *p = xx + int(ch); 
+        cout<<*p;
+    }
+    ~Test() 
+    {
+        delete p;
+    }
+};
+int main()
+{
+    Test ob(10, 'B'); 
+    return 0;
+}
+A. The program will print the output 76.
+B. The program will print the output 108.
+C. The program will print the output garbage value.
+D. The program will report compile time error.
+Correct Answer: A
+
+7. Which of the following constructor is used in the program given below?
+#include<iostream>
+using namespace std; 
+class Test
+{
+    int x, y; 
+    public:
+    Test(int xx = 10, int yy = 20 )
+    {
+        x = xx; 
+        y = yy;
+    }
+    void Display()
+    {
+        cout<< x << " " << y << endl;
+    } 
+    ~Test()
+    { } 
+};
+int main()
+{
+    Test ob; 
+    ob.Display(); 
+    return 0;
+}
+A. Copy constructor
+B. Non-parameterized constructor
+C. Default Argument constructor
+D. None of these
+Correct Answer: C
+
+8. What will be the output of the following program?
+#include<iostream.h>
+class Base
+{   
+    public:
+    Base()
+    {
+        cout<< "Base OK. "; 
+    }
+};
+class Derived: public Base
+{
+    public:
+    Derived()
+    { 
+        cout<< "Derived OK. "; 
+    }
+    ~Derived()
+    { 
+        cout<< "Derived DEL. "; 
+    }
+};
+int main()
+{
+    Base    ob;
+    Derived od;
+    od.~Derived(); // To call destructor explicitly
+    return 0;
+}
+A. Base OK. Derived OK. Derived DEL.
+B. Base OK. Base OK. Derived OK. Derived DEL.
+C. Base OK. Derived OK. Derived DEL. Derived DEL.
+D. Base OK. Base OK. Derived OK. Derived DEL. Derived DEL.
+E. The program will report compile time error.
+
+Correct Answer: D
+
+9. What will be the output of the following program?
+#include<iostream>
+using namespace std; 
+class Test
+{
+    int x, y; 
+    public:
+    Test(int xx)
+    {
+        x = ++xx;
+    } 
+    ~Test()
+    {
+        cout<<x - 1 <<" ";
+    }
+    void Display()
+    {
+        cout<<--x + 1 << " ";
+    } 
+};
+int main()
+{
+    Test ob(5);
+    ob.Display();
+    int *p = (int*)&ob;
+    *p = 40;
+    ob.Display();
+    return 0; 
+}
+A. 6 6 4
+B. 6 6 5
+C. 5 40 38
+D. 6 40 38
+E. 6 40 39
+
+Correct Answer: D
+
+10. Which of the following statement is correct about the program given below?
+#include<iostream> 
+using namespace std;
+class Test
+{
+    int x; 
+    public:
+    Test(float ss)
+    {
+        cout<<"Float" <<endl;
+    }
+    Test(int xx)
+    {
+        cout<< "Int" << endl;
+    }
+    Test(char ch)
+    {
+        cout<< "Char" << endl;
+    }
+    ~Test() 
+    {
+        cout<< "Final";
+    }
+};
+int main()
+{
+    Test *ptr = new Test('B');
+    return 0; 
+}
+
+Correct Answer: 

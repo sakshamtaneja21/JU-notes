@@ -1,0 +1,150 @@
+1. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	int i,*j,k;
+	i=3;
+	j=&i;
+	printf(“%d”, i**j*i+*j);
+}
+(a) 30
+(b) 27
+(c) 9
+(d) Error
+Correct Answer: A
+
+i = 3
+j = Address of i =&i;
+*j = *(&i)  = i = 3
+
+3 * 3 * 3 + 3 = 30
+
+2. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char *str;
+	str=”%d\n”;
+	str++;
+	str++;
+	printf(str-2,300); // printf("%d\n",300);
+}
+(a)	No Output
+(b)	30
+(c)	3
+(d)	300
+Correct Answer: d
+
+3. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char *str;
+	str=”%s”;
+	printf(str,”K”); //printf("%s", "K");
+}
+(a)	Error
+(b)	No Output
+(c)	K
+(d)	%s
+Correct Answer: c
+
+4. Which of the following is the correct output for the program given below, if an integer is 4 bytes long?
+#include<stdio.h>
+void main()
+{
+	int ***r, **q, *p, i=8;
+	p=&i;
+	q=&p;
+	r=&q;
+	printf(“%d%d%d”,*p,**q,***r);
+}
+(a)	8 8 8
+(b)	4000 4002 4004
+(c)	4000 4004 4008
+(d)	4000 4008 4016
+Correct Answer: 8 8 8 (a)
+*p = *(&i) = i = 8
+**q = **(&p) = *p = *(&i) = i = 8
+***r = ***(&q) = **q = **(&p) = *p = *(&i) = i = 8
+
+5. What will be the output of the following program?
+#include<stdio.h>
+void main()
+{
+	printf(“%c”,6[“AGRA RAJASTHAN”]);
+}
+(a) RAJASTHAN
+(b) AGRA
+(c) A
+(d) ASTHAN
+Correct Answer: c
+
+6. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char *p;
+	p=”Hello”;
+	printf(“%s”,*&*&p);  //printf("%s",p);
+}
+(a) llo
+(b) Hello
+(c) ello
+(d) h
+Correct Answer: b
+
+7. Which of the following statement is correct about k used in the statement given below?
+char ****k;
+(a) Pointer to a pointer to a pointer to a char.
+(b) Pointer to a char pointer.
+(c) Pointer to a pointer to a char.
+(d) Pointer to a pointer to a pointer to a pointer to a char.
+Correct Answer: d
+
+8. Which of the following is the correct output for the program given below?
+#include<stdio.h>
+void main()
+{
+	char str[]=”peace”;
+	char *s=str;
+	printf(“%s”,s++ + 3);
+	
+}
+(a) peace
+(b) eace
+(c) ace
+(d) ce
+Correct Answer: ce (d)
+
+str[0]	str[1]	str[2]	str[3]	str[4]	str[5]
+p	e	a	c	e	\0
+1000	1001	1002	1003	1004	1005
+s = str = 1000
+
+
+9. Which of the following statements is correct about the program given below?
+#include<stdio.h>
+void main()
+{
+	int arr[3][3]={1,2,3,4};
+	printf(“%d”,*(*(*(arr))));
+}
+(a) It will output a garbage value.
+(b) It will output a value 1.
+(c) It will output a value 3.
+(d) It will report an error: ‘Invalid Indirection’.
+Correct Answer: d
+
+
+10. The operator used to get value at address stored in a pointer variable is
+(a) *
+(b) &
+(c) &&
+(d) ||
+Correct Answer: * (a)
+
+int a = 10, *p;
+p = &a;
+
+printf("%d", *p); *p = *(&a) = a  = 10

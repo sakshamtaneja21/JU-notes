@@ -1,0 +1,129 @@
+1.Regarding real values in C, which of the following is TRUE?
+1. A float occupies less memory than a double.
+2. The range of real numbers that can be represented by a double is less than those represented by a float.
+(a) Only Option 1
+(b) Only Option 2
+(c) Both Options 1 and 2
+(d) Neither Option 1 nor 2
+Correct Answer: 
+2. What is the maximum value of a signed data type    that is 8 bits in size?
+	(a)  2 to the power of 7
+	(b)  2 to the power of 8
+	(c)  (2 to the power of 7) minus 1
+	(d) (2 to the power of 8) minus 1
+Correct Answer:
+
+3.     Which of the following statements is/are TRUE?
+	1.   A char data type variable always occupies one byte independent of the system architecture.
+ 	2.   The sizeof operator is used to determine the amount of memory occupied by a variable.
+(a)	Both 1 and 2
+(b)	1 only
+(c)	2 only
+(d)	Neither 1 nor 2
+Correct Answer: 
+
+4. What value will be stored in z if the following code is executed?
+	main()
+	{
+		int x=5,y=-10,z;
+		int a=4,b=2;
+		z=x++ + ++y *b/a;
+	}
+(a)	-2
+(b)	0
+(c)	1
+(d)	Error
+Correct Answer: z = x++ + ++y * b / a;
+                                   z = 5 + (-9) * 2 / 4
+	            z = 5 - 18 / 4
+                                 z = 5 - 4 = 1
+
+5.	What is the function of the modulus operator in most languages?
+(a) Sets a system environmental value to either base 10, base 8, or base 16.
+(b) Returns the first argument raised to the second argument power.
+(c) Prints out the actual code written to standard output  rather than executing the code.
+(d) Returns the remainder after dividing one number by another.
+6. For the following statements find the values generated for p and q?
+int p=0,q=1;
+p=q++;
+p=++q;
+p=q--;
+p=--q;
+The value of p and q are
+(a)	1 , 1
+(b)	0 , 0
+(c)	3 , 2
+(d)	1 ,2
+
+Correct Answer: 
+
+7. Which of the following is a better approach to do the operation i=i*16;?
+(a)	Multiply i by 16 and keep it
+(b)	Shift left by 4 bits
+(c)	Add i 16 times
+(d)	None of the above
+Correct Answer: 
+		i = i * 16
+8. What is the value of the following expression?
+i=1;
+i=(i<<= 1%2);
+(a)	2
+(b)	1
+(c)	0
+(d)	Syntax Error
+Correct Answer: 
+	1 % 2 = 1
+                i = i <<= 1 => i= i = i << 1
+		1 x 2^1 = 1 x 2 = 2
+
+9. Which of the following expression will correctly swap two integers without using a temporary variable?
+(a)	(x^=y), (y^=x)
+(b)	(x=y),(y=x)
+(c)	(x^=y), (y^=x),(x^=y)
+(d)	x^=(y^=x)
+Correct Answer: 
+
+x = 10, y = 15
+
+Truth Table for Bitwise XOR (^)
+---------------------------------------------
+A	B	Y = A ^ B
+---------------------------------------------
+0	0	0
+0	1	1
+1	0	1
+1	1	0
+---------------------------------------------
+
+x = x ^y;
+y = x ^ y;
+x = x ^ y;
+	1010
+	1111
+                --------------------
+               x = 0101
+                      1111
+                ---------------------
+               y = 1010     (Y = 10)
+                      0101
+              ------------------------
+               x = 1111     (X = 15) 	
+
+x ^=y^=x^=y;
+
+	x = 7
+	y = 5
+	
+	111
+	101
+             ------------------
+                     010
+
+10. What will be result of executing the following statement?
+int i=10;
+printf(“%d %d %d”,i, ++i, i++);
+(a)	10 11 12
+(b)	10 11 11
+(c)	Result is operating system dependent
+(d)	Result is compiler dependent
+Correct Answer: 
