@@ -25,7 +25,7 @@ int main() // main is a predefined identifier not an keyword
 ```
 * There are 95 keywords in C++
 
-<img src="trigraph_sequence.png">
+<img src="https://github.com/piyushagarwal08/JU-Notes/blob/master/trigraph_sequence.png">
 
 * In modern compilers, trigraph features are disabled by default
 * Generally, C++ compiler ignores the white-spaces
@@ -339,6 +339,7 @@ int main()
   return 0;
 }
 ```
+<<<<<<< HEAD
 
 * to find the square root we use ``` cmath``` preprocessing directry .
 * Hip hop
@@ -359,5 +360,5 @@ int main()
 
 * Four musketeers
 ```
-
+#
 ```
