@@ -426,4 +426,42 @@ int main()
    return 0;
 }
 ```
+* Leap year
+```
+// leap year
+#include <iostream>
+using namespace std;
+/*
+If the year is evenly divisible by 4, go to step 2. Otherwise, go to step 5.
+If the year is evenly divisible by 100, go to step 3. Otherwise, go to step 4.
+If the year is evenly divisible by 400, go to step 4. Otherwise, go to step 5.
+The year is a leap year (it has 366 days).
+The year is not a leap year (it has 365 days).
+*/
+int main() 
+{
+   // Try out your code here
+    int y;
+  std::cin>>y;
+  if(y%4==0)
+  {
+    if(y%100==0)
+    {
+      if(y%400==0)
+        std::cout<<"Vicky can celebrate his birthday.";
+      else
+        std::cout<<"Vicky can't celebrate.";
+  	}
+    else
+      std::cout<<"Vicky can celebrate his birthday.";
+  }
+  else
+    std::cout<<"Vicky can't celebrate.";
+  return 0;
+}
+```
+
+* Expression in switch case can only be int,short,char.
+* Switch does not work for float
+* fallthrough is a condition that occurs when break is not used.
 * 
