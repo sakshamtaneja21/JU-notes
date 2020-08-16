@@ -339,3 +339,25 @@ int main()
   return 0;
 }
 ```
+
+* to find the square root we use ``` cmath``` preprocessing directry .
+* Hip hop
+```
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int x,y,r;
+  std::cin>>x>>y;
+  r = sqrt((x-3)*(x-3) + (y-4)*(y-4));  // finds the perpendicular distance between 2 points
+  std::cout<<r;
+  return 0;
+}
+```
+
+* Four musketeers
+```
+
+```
