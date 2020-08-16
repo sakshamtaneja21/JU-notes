@@ -464,4 +464,90 @@ int main()
 * Expression in switch case can only be int,short,char.
 * Switch does not work for float
 * fallthrough is a condition that occurs when break is not used.
+* Electricity bill
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a, b, c, d;
+  cin>>a;
+  if (a <= 200)
+    b = a * 0.5;
+  else if ((a <= 400) && (a > 200))
+    b = (a * 0.65) + 100;
+  else if ((a <= 600) && (a > 400))
+    b = (a * 0.85) + 200;
+  else if (a > 600)
+    b = (a * 1.25) + 450;
+  
+  
+  cout<<"Rs."<<b;
+}
+```
+
+* Gardning
+```
+//Gardening
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int r,c,t;
+  std::cin>>r>>c>>t;
+  if(t>r && t<=2*r)
+    std::cout<<"It is a mango tree";
+  else if(t<=r*(c-1) && t > r*(c-2))
+    std::cout<<"It is a mango tree";
+  else
+    std::cout<<"It is not a mango tree";
+  return 0;
+}
+```
+* Cricket!
+```
+#include<iostream>
+
+#include<iomanip>
+
+using namespace std;
+
+int main()
+
+{
+
+int a,b,x,y;
+
+ std::cin>>a>>b>>x>>y;
+
+ float m = a/6;
+
+ int n = y/6;
+
+ int p = y%6;
+
+ float k = ((float)n + (float)p/10);
+
+ float d = x/k;
+
+ float f = b/m;
+
+ std::cout<<m<<"\n";
+
+ std::cout<<std::fixed<<std::setprecision(1)<<k<<"\n";
+
+ std::cout<<d<<"\n"<<f<<"\n";
+
+ if(d>f)
+
+   std::cout<<"Eligible to Win";
+
+ else
+
+   std::cout<<"Not Eligible to Win";
+
+}
+```
+
 * 
