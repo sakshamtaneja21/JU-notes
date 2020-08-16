@@ -360,5 +360,70 @@ int main()
 
 * Four musketeers
 ```
-#
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int x1, y1, x2, y2, x3, y3;
+  cin>>x1>>y1>>x2>>y2>>x3>>y3;
+  float x, y;
+  x = (float)(x1 + x2 + x3)/3;
+  y = (float)(y1 + y2 + y3)/3;
+  cout<<x<<endl;
+  cout<<y<<endl;
+  
+}
 ```
+
+* Expression in switch case can only be int,short,char.
+* Switch does not work for float
+* fallthrough is a condition that occurs when break is not used.
+
+* Sizeof Oprator
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  cout<<sizeof(char)<<endl;
+  cout<<sizeof(int)<<endl;
+  cout<<sizeof(float)<<endl;
+  cout<<sizeof(double)<<endl;
+  
+}
+```
+
+* terary oprator
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int a;
+  cin>>a;
+  a%2 == 0 ? cout<<"Even" : cout<<"Odd";
+}
+```
+
+* Smallest number 
+```
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   // Try out your code here
+  int a, b;
+  cin>>a>>b;
+  if (a < b)
+     cout<<a<<" is smallest number";
+  else
+     cout<<b<<" is smallest number";
+    
+   return 0;
+}
+```
+* 
