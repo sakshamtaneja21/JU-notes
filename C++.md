@@ -676,3 +676,102 @@ int main()
   return 0;
 }
 ```
+
+* Decision making
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int x,y,z;
+  std::cin>>x>>y>>z;
+  
+  if(x>y && x<z || x>z && x<y) // x is second largest
+    std::cout<<"The treasure is in box which has number "<<x<<endl;
+  else if(y>x && y<z || y>z && y<x)
+    std::cout<<"The treasure is in box which has number "<<y<<endl;
+  else if(z>x && z<y || z>y && z<x)
+    std::cout<<"The treasure is in box which has number "<<z<<endl;
+  
+  if(y%x==0 && z%x==0)
+    std::cout<<"The code to open the box is "<<x;
+  else if(z%y==0 && x%y==0)
+    std::cout<<"The code to open the box is "<<y;
+  else if(x%z==0 && y%z==0)
+    std::cout<<"The code to open the box is "<<z;
+  else
+    std::cout<<"The code to open the box is "<<1;
+  return 0;
+}
+```
+```
+//sece dining
+/*
+front ~> r1 ~> left
+front ~> r2 ~> right
+rear ~> r1 ~> right
+rear ~> r2 ~> left
+Assume rail is attached with the wall
+and if no rail is selected, then print based on door
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+  string s;
+  int rail;
+  getline(cin,s);
+  std::cin>>rail;
+  if(s=="front" && rail==1 || s=="rear" && rail==2)
+    std::cout<<"Left Handed";
+  else if(s=="front" && rail==2 ||  s=="rear" && rail==1)
+    std::cout<<"Right Handed";
+  else if(s=="front")
+    std::cout<<"Right Handed";
+  else
+    std::cout<<"Left Handed";
+  return 0;
+}
+```
+
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  // Time Sheet
+  //Type your code here.
+  /*
+  100 per hr
+  +15 per hr if hr>8
+  +25 per hr if hr >40 in one week
+  +25% of hr saturday and +50% of hr for sundays
+  */
+  int a[7],pay=0,total=0;
+
+  for( int b = 0; b < 7; b++)
+      {
+        std::cin>>a[b];
+      }
+  for(int i=0;i<7;i++)
+  {
+    if(a[i]>8)
+      pay = pay+15*(a[i]-8);
+    
+    if(i==0)
+      pay = pay+100*a[i]+0.5*100*a[i];
+    else if(i==6)
+      pay = pay + 100*a[i] + (100*a[i])/4;
+    else
+    	pay = pay + 100*a[i];
+    total = total+a[i];
+}
+  if(total-a[0]-a[6]>40)
+    pay = pay+25;
+  std::cout<<pay;
+  return 0;
+}
+```
+
+* For loop is also known as Entry Controlled Loop
