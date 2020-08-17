@@ -550,4 +550,129 @@ int a,b,x,y;
 }
 ```
 
-* 
+* Car Milagi
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+  float x; //mileage
+  int y,z; // litres of petrol, distance to travel
+  std::cin>>x>>y>>z;
+  x*y>=z?std::cout<<"Can reach":std::cout<<"Cannot reach";
+  return 0;
+  
+}
+```
+```
+//game with shapes
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  // x ~> radius of circle , y~> length of square
+  int x,y;
+  std::cin>>x>>y;
+  if(2*x<=y)
+    std::cout<<"circle can be inside a square";
+  else
+    std::cout<<"circle cannot be inside a square";
+  return 0;
+}
+```
+
+```
+//Age detector
+#include<iostream>
+using namespace std;
+int main()
+{
+   int x,y;
+  std::cin>>x>>y;
+  if(y>x)
+    std::cout<<y-x<<endl;
+  else
+    std::cout<<(100+y)-x<<endl;
+  return 0;
+}
+```
+* online shoping
+```
+#include<iostream>
+int main()
+{
+  //Type your code here.
+  int a, b, c, d, e, f, g, h, i, fl, am, sd;
+  std::cin>>a >>b >>c;
+  std::cin>>d >>e >>f;
+  std::cin>>g >>h >>i;
+  
+  
+  fl = (a-((a*b)/100)) + c;
+  sd = (d -((d*e)/100)) + f;
+  am = (g -((g*h)/100)) + i;
+  
+  std::cout<<"In Flipkart: Rs."<<fl;
+  std::cout<<"\nIn Snapdeal: Rs."<<sd;
+  std::cout<<"\nIn Amazon: Rs."<<am;  
+  
+  if((fl < sd) && (fl < am))
+    std::cout<<"\nHe will prefer Flipkart";
+  else if(sd < am)
+    std::cout<<"\nHe will prefer Snapdeal";
+  else if (am < sd)
+    std::cout<<"\nHe will prefer Amazon";
+  
+  return 0;
+}
+```
+```
+//Microvave open
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int n;
+  float h;
+  cin>>n>>h;
+  
+  
+  switch(n)
+  {
+    case 1: cout<<h * float(n); break;
+    case 2: cout<<h * 1.5;  break;
+    case 3: cout<<h * 2.0;  break;
+    default: cout<<"Number of items is more";
+  }
+  return 0;
+}
+```
+```
+//Matinee movie tickets
+#include<iostream>
+using namespace std;
+int main()
+{
+  //Type your code here.
+  int a;
+  float t;
+  std::cin>>a>>t;
+  if(t>13 && t<16)
+  {
+    if(a > 13)
+      std::cout<<"$5.00";
+    else
+      std::cout<<"$2.00";
+  }
+  else
+  {
+    if(a > 13)
+      std::cout<<"$8.00";
+    else
+      std::cout<<"$4.00";
+  } 
+  return 0;
+}
+```
