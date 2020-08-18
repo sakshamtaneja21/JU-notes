@@ -21,9 +21,16 @@
 * Work toward common conclusion
 * Analyze both positive and negative points
 * Conclusion is important 
+* ask relevent questions
 
 ## leadership
 * makes others speak
 * Give direction - Make a GD productive
-* 
+* Ask Questions
+* first mover advantage
 
+## Approaches
+* Stakeholder approch
+* Listern wisely
+
+Example
