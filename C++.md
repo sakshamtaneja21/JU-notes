@@ -774,4 +774,22 @@ int main()
 }
 ```
 
-* For loop is also known as Entry Controlled Loop
+* For loop is also known as ```Entry Controlled Loop```
+---
+## Stage 3
+### Loop
+
+```
+#include<iostream>
+int main(){
+  // Type your code here
+  //factorial 
+  //5*4*3*2*1
+  int x,result=1;
+  std::cin>>x;
+  for(;x>0;x--)
+    result = result*x;
+  std::cout<<result;
+  return 0;
+}
+``` 
