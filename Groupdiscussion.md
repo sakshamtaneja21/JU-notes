@@ -18,5 +18,12 @@
 ## Tips for GD
 * make a non speaker talk.
 * Take a nutral stand
+* Work toward common conclusion
+* Analyze both positive and negative points
+* Conclusion is important 
+
+## leadership
+* makes others speak
+* Give direction - Make a GD productive
 * 
 
