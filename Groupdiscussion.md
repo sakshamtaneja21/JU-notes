@@ -16,6 +16,7 @@
 
 
 ## Tips for GD
-* make a non speaker talk
+* make a non speaker talk.
+* Take a nutral stand
 * 
 
