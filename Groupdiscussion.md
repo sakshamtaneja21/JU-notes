@@ -30,7 +30,34 @@
 * first mover advantage
 
 ## Approaches
-* Stakeholder approch
-* Listern wisely
 
-Example
+* Stakeholder approach where we took factors where people are responsible
+
+### SPELT Approach 
+* S - Social
+* P - Politcal
+* E - Economical
+* L - legal
+* T - Technological
+
+``` Smart work and Hard Work ```
+* use keyword approach and give keyword
+
+### Body language
+* Posture
+* Eye Contact 
+* no starring
+* straight back
+* fold your legs
+* acting skills
+
+
+### Do and Dont's
+* formal dressing
+* speak clearly
+* speak sendable
+* listen carefully
+* positive attitude
+* initiate GD
+* speak sensually
+* 
