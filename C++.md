@@ -793,3 +793,162 @@ int main(){
   return 0;
 }
 ``` 
+
+```
+//reverse a number 
+#include <iostream>
+int main() 
+{
+	int x;
+  std::cin>>x;
+  while(x>0)
+  {
+   std::cout<<x%10;
+    x = x/10;
+  }
+  
+}
+```
+
+```
+//paladrome
+#include <iostream>
+int main() 
+{
+	int n, rev = 0, temp;
+  	std::cin>>n;
+  temp = n;
+  	while(n > 0){
+            int r = n % 10;
+            rev = rev * 10 + r;
+            n = n / 10;
+       }
+       if(rev == temp)
+  	    std::cout<<"Palindrome";
+	return 0;
+}
+```
+
+* counts of digits
+```
+#include<iostream>
+#include <bits/stdc++.h> 
+using namespace std; 
+// To count the no. of digits in a number 
+void count_digits(int n) 
+{ 
+    // converting number to string using 
+    // to_string in C++ 
+    string num = to_string(n); 
+  
+    // calculate the size of string 
+    cout << num.size() << endl; 
+} 
+// driver function 
+int main() 
+{ 
+    // number 
+    int n; 
+  cin>>n;
+    count_digits(n); 
+    return 0; 
+} 
+```
+
+* decript the message
+```
+//6 has divisors 1, 2 and 3 (excluding itself), and 1 + 2 + 3 = 6, so 6 is a perfect number.
+#include<iostream>
+int main()
+{
+ int a,b,num,i,div,sum=0;
+ std::cin>>a>>b;
+ num=a+b;
+ for(i=1;i<num;i++)
+ {
+   div=num%i;
+   if(div==0)
+     sum=sum+i;
+ }
+
+ if(sum==num)
+   std::cout<<"They can read the message";
+ else
+   std::cout<<"They can't read the message";
+ return 0;
+}
+```
+
+```
+//handshake
+#include<iostream>
+using namespace std;
+int main()
+{
+ int a,n;
+ std::cin>>n;
+ a=(n*(n-1))/2;
+   std::cout<<a;
+}
+```
+
+```
+//dollar and cents
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a, b, c, d, e, f;
+  cin>>a>>b>>c>>d;
+  e = a + c;
+  f = b + d;
+  if(f>99)
+  {
+    e = e + 1;
+    f = f - 100;
+  }
+  cout<<e<<endl;
+  cout<<f;
+  
+}
+```
+
+```
+#include<iostream>
+using namespace std;
+int main()
+{
+ int n,count=0;
+ cin>>n;
+ cout<<n<<endl;
+ while(n!=1)
+ {
+   if(n%2==0)
+     n=n/2;
+   else
+     n=3*n+1;
+   cout<<n<<endl;
+   count++;
+ }
+
+ cout<<count;
+}
+```
+
+* fibonacci series
+```
+#include <iostream>  
+using namespace std;  
+int main()  
+{  
+int n1=0,n2=1,n3,i,number;    
+std::cin>>number;    
+for(i=2;i<number;++i)  
+{    
+ n3=n1+n2;    
+ n1=n2;    
+ n2=n3;    
+}  
+std::cout<<n3;
+}
+```
