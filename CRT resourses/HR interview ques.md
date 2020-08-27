@@ -291,5 +291,3 @@ Because I believe my talents and skills will definitely be a big contribution to
 I go along fine with co-workers. When I feel the other guy’s, attitude is a negative one; I try my best to approach him and talk things over. I always make it a point to stay positive and transparent with people around me.
 
 50) Do you have any questions for me?
-
-
