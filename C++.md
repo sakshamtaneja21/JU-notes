@@ -952,3 +952,218 @@ for(i=2;i<number;++i)
 std::cout<<n3;
 }
 ```
+
+```
+// Viva on odd numbers
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main()
+{
+int num;
+float marks=0.0 ;
+for(int i=0;i<3;)
+{
+cin>>num;
+if(num<0)
+{
+marks=marks-1;
+break;
+}
+else if(num%2==0)
+{
+marks=marks-0.5;
+}
+else{
+marks=marks+1;
+i++;
+}
+}
+cout<<marks<<endl;
+}
+```
+
+* Kaprekar number
+```
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+ 
+bool chkkaprekar(int n)
+{
+    if (n == 1)
+       return true;
+    int sqr_n = n * n;
+    int ctr_digits = 0;
+    while (sqr_n)
+    {
+        ctr_digits++;
+        sqr_n /= 10;
+    }
+    sqr_n = n*n; 
+    for (int r_digits=1; r_digits<ctr_digits; r_digits++)
+    {
+         int eq_parts = pow(10, r_digits);
+
+         if (eq_parts == n)
+            continue;
+         int sum = sqr_n/eq_parts + sqr_n % eq_parts;
+         if (sum == n)
+           return true;
+    }
+    return false;
+}
+int main()
+{
+int kpno;
+
+cin >> kpno;
+          chkkaprekar(kpno)? cout<<"Kaprekar Number": cout <<"Not a Kaprekar Number";
+          cout <<endl; 
+}
+```
+
+* Data Mining
+```
+#include<iostream>
+
+#include <bits/stdc++.h>  
+
+using namespace std;  
+
+int reverse(int n)  
+
+{  
+
+   int rev = 0;  
+
+   while (n != 0) {  
+
+       rev = (rev * 10) + (n % 10);  
+
+       n /= 10;  
+
+   }  
+
+   return rev;  
+
+}  
+
+void getSum(int n)  
+
+{  
+
+   n = reverse(n);  
+
+   int sumOdd = 0, sumEven = 0, c = 1;  
+
+ 
+
+   while (n != 0) {  
+
+ 
+
+       if (c % 2 == 0)  
+
+           sumEven += n % 10;  
+
+       else
+
+           sumOdd += n % 10;  
+
+       n /= 10;  
+
+       c++;  
+
+   }
+
+ 
+
+ if(sumOdd==sumEven)
+
+   cout<<"Yes";
+
+ else
+
+   cout<<"No";
+
+}  
+
+int main()  
+
+{  
+
+   int n ;
+
+     cin>>n;
+
+   getSum(n);  
+
+   return 0;  
+
+}
+```
+
+* target practice
+```
+#include <iostream>
+
+using namespace std;
+
+ 
+
+int main(void)
+
+{
+
+   int target, score, attempt=0, sum=0;
+
+cin>>target;
+
+while(sum<target)
+
+{
+
+ cin>>score;
+
+ sum=sum+score;
+
+ attempt++;
+
+}
+
+cout<<"The number of turns is "<<attempt<<"\n";
+
+}
+```
+### Series
+
+* I
+```
+#include <iostream>
+#include <cmath>
+int main()
+{
+int n;
+std::cin>>n;
+double r=0.5;
+for(int i=0;i<n;i++)
+{
+if(i==0)
+{
+std::cout<<r;
+continue;
+}
+else
+{
+double t=pow(3,i-1);
+double x=t+r;
+r=x;
+std::cout<<" "<<x;
+}
+}
+}
+```
+
+* II
+```
