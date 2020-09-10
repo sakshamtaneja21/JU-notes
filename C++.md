@@ -1167,3 +1167,441 @@ std::cout<<" "<<x;
 
 * II
 ```
+//Write a program to generate the first 'n' terms of the following series 121, 225, 361,...
+#include<iostream>
+int main ()
+{
+   int n, a=11, x=4, i=0, num;
+   std::cin>>n;
+for(i=0;i<n;i++)
+{
+   num=a*a;
+   std::cout<<num<<" ";
+   a=a+4;
+}
+}
+```
+
+* III
+```
+//Write a program to generate the first 'n' terms of the following series 6, 11, 21, 36, 56,...
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+ int n,i,j=6,sum=5;
+
+ cin>>n;
+
+ for (i=1;i<=n;i++)
+
+ {
+
+ cout<<j<<" ";
+
+ j=j+sum;
+
+  sum=sum+5;  
+
+ }
+
+ return 0;
+
+}
+```
+
+* seriers IV
+```
+//Write a program to generate the following series 0,2,8,14,...,34.
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int n,x;
+
+ cin>>n;
+
+ for (int i = 1; i <= n; i++)
+
+   {
+
+   x=i*i;
+
+   if (x%2 == 0)
+
+   cout<< x - 2<<" ";
+
+ else
+
+   cout<< x - 1<<" ";
+
+   }  
+
+}
+```
+* series 4
+```
+//Write a program to generate the first 'n' terms of the following series 121, 225, 361,...
+
+#include<iostream>
+
+
+int main ()
+
+{
+
+   int n, a=11, x=4, i=0, num;
+
+   std::cin>>n;
+
+   
+
+for(i=0;i<n;i++)
+
+{
+
+   num=a*a;
+
+   std::cout<<num<<" ";
+
+   a=a+4;
+
+}
+
+}
+```
+
+* Pattern !
+```
+/*
+Write a program to print the following pattern.
+Sample Input:
+
+3
+
+Sample Output:
+
+3 
+44 
+555 
+6666 
+6666 
+555 
+44 
+3
+*/
+
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+
+int n = 3,n1,i,j;
+
+cin >> n1;
+
+for(i=1;i<=n+1;i++)
+
+{
+
+for(j=1;j<=i;j++)
+
+cout<<n1;
+
+n1++;
+
+cout<<endl;
+
+}
+
+n1--;
+
+for(i=n+1;i>=1;i--)
+
+{
+
+for(j=1;j<=i;j++)
+
+cout<<n1;
+
+n1--;
+
+cout<<endl;
+
+}
+
+}
+```
+
+* pattern 2
+```
+/*
+Write a program to print the following pattern.
+Sample Input:
+
+5
+
+Sample Output:
+
+1
+3*2
+4*5*6
+10*9*8*7
+11*12*13*14*15
+*/
+
+#include<iostream>  
+
+using namespace std;  
+
+void printPattern(int n)  
+
+{  
+
+   int j, k = 0;  
+
+   for (int i=1; i<=n; i++)  
+
+   {  
+
+       if (i%2 != 0)  
+
+       {  
+
+           for (j=k+1; j<k+i; j++)  
+
+               cout << j << "*";  
+
+           cout << j++ << endl;  
+
+           k = j;      
+
+       }  
+
+       else
+
+       {  
+
+           k = k+i-1;  
+
+           for (j=k; j>k-i+1; j--)  
+
+               cout << j << "*";  
+
+           cout << j << endl;      
+
+       }  
+
+   }  
+
+}  
+
+int main()  
+
+{  
+
+   int n;
+
+  cin>>n;
+
+   printPattern(n);  
+
+   return 0;  
+
+}
+```
+
+* series 3
+```
+/*
+Write a program to print the following pattern.
+Sample Input:
+
+5
+
+Sample Output:
+
+1 
+2*2 
+3*3*3 
+4*4*4*4 
+5*5*5*5*5 
+5*5*5*5*5 
+4*4*4*4 
+3*3*3 
+2*2 
+1
+*/
+
+#include<iostream>
+
+int main()
+
+{
+
+ int n,j;
+
+ std::cin>>n;
+
+ for(int I=1; I<=n; I++)
+
+ {
+
+   for( j=1; j<=I; j++)
+
+     if (j<I)
+
+     {
+
+       std::cout<<I<<"*";}
+
+   
+
+   else
+
+   {
+
+     std::cout<< I<<"\n";
+
+   }
+
+ }
+
+ for(int I=n; I>=0; I--)
+
+ {
+
+   for( j=1; j<=I; j++)
+
+     if (j<I)
+
+       std::cout<< I<<"*";
+
+   else
+
+     std::cout<< I<<"\n";
+
+ }
+
+}
+```
+
+Patternu IV
+```
+/*
+Write a program to print the given below pattern.
+Sample Input:
+
+5
+
+Sample Output:
+
+11112
+32222
+33334
+54444
+55556
+*/
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+   int flag=0;
+
+  int n,i,j;
+
+   cin>>n;
+
+ int s=0;
+
+  int l=n+1;
+
+  int m,k;
+
+   m=n;
+
+ for(int i=1;i<=n;i++)
+
+ {
+
+  for(int j=2;j<l;j++)
+
+   {
+
+    if(i%2!=0)
+
+       {
+
+        cout<<i;
+
+          k=i;
+
+           flag=1;
+
+           s=j;
+
+         if(s==m)
+
+         {
+
+          cout<<++k;
+
+         }
+
+       }
+
+       
+
+     if(i%2==0)
+
+     {
+
+      cout<<i;
+
+       flag=0;
+
+     }
+
+   }
+
+   cout<<endl;
+
+   if(i<n)
+
+   {
+
+    if(flag==1)
+
+     {
+
+    cout<<++k;
+
+    }
+
+   }
+
+   
+
+ }
+
+   return 0;
+
+}
+```
+
+
+
